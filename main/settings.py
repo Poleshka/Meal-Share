@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-poleshka-mealshare-5ctih7bsboz.ws.codeinstitute-ide.net', '.herokuapp.com']
+ALLOWED_HOSTS = ['8000-poleshka-mealshare-5ctih7bsboz.ws.codeinstitute-ide.net', 'https://8000-poleshka-mealshare-5ctih7bsboz.ws.codeinstitute-ide.net', '.herokuapp.com']
 
 
 # Application definition
@@ -106,6 +106,12 @@ DATABASES = {
     dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://8000-poleshka-mealshare-5ctih7bsboz.ws.codeinstitute-ide.net",
+    "http://*.codeanyapp.com",
+    "http://*.herokuapp.com"
+]
+
 
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
@@ -146,7 +152,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field

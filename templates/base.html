@@ -1,5 +1,10 @@
 {% load static %}
 
+{% url 'home' as home_url %}
+{% url 'account_login' as login_url %}
+{% url 'account_signup' as signup_url %}
+{% url 'account_logout' as logout_url %}
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,11 +25,12 @@
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {% endblock %}
-    <title>Meal Share & Meal Planner</title>
+    <title>Meal Share & Planner - {% block title %}{% endblock %}</title>
 </head>
 
 <body>
     {% include 'includes/header.html'%}
+
 
 
     <main>
