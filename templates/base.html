@@ -18,6 +18,10 @@
         integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+        integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     {% endblock %}
 
     {% block onload_js %}
@@ -28,12 +32,63 @@
     <title>Meal Share & Planner - {% block title %}{% endblock %}</title>
 </head>
 
+<header>
+    <!-- Navigation items -->
+    <div class="navbar">
+        <div class="container">
+            <a><img src="{% static 'images/logo.webp %'}" alt="" class="logo"></a>
+            <ul class="nav justify-content-center">
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Planner</a>
+                </li>
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_logout' %}">Logout</a>
+                </li>
+                {% else %}
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_signup' %}">Signup</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                        href="{% url 'account_login' %}">Login</a>
+                </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+
+    <!-- Form for search bar --> 
+    <!-- <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary" type="submit">Search</button>
+            </form>
+        </div>
+    </nav> -->
+</header>
+
 <body>
-    {% include 'includes/header.html'%}
 
 
 
-    <main>
+    <main class="flex-shrink-0 main-bg">
+        {% if user.is_authenticated %}
+        <p class="text-end m-3">Welcome {{ user }}</p>
+        {% else %}
+        <p class="text-end m-3">You are not logged in</p>
+        {% endif %}
+
         {% block content %}
 
 
@@ -42,7 +97,27 @@
 
     </main>
 
-    {% include 'includes/footer.html' %}
 </body>
+<footer>
+    <!-- social media -->
+    <a href="https://www.instagram.com" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+
+    <a href="https://www.twitter.com" target="_blank">
+        <i class="fa-brands fa-twitter"></i>
+    </a>
+    
+
+    <a href="https://www.github.com" target="_blank">
+        <i class="fa-brands fa-github"></i>
+    </a>
+
+    <a href="https://www.github.com" target="_blank">
+        <i class="fa-brands fa-linkedin"></i>
+    </a>
+
+
+</footer>
 
 </html>
