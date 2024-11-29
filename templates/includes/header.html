@@ -34,10 +34,11 @@
                     <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                         href="{% url 'account_login' %}">Login</a>
                 </li>
+                {% endif %}
             </ul>
         </div>
     </div>
-    {% endif %}
+    
     <!-- Form for search bar -->
     <!-- <nav class="navbar bg-body-tertiary">
         <div class="container-fluid">

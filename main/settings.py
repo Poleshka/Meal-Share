@@ -52,9 +52,11 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'django_summernote',
     'cloudinary_storage',
     'cloudinary',
     'home',
+    'recipes',
 ]
 
 SITE_ID = 1
@@ -78,7 +80,8 @@ ROOT_URLCONF = 'main.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_DIR
+        'DIRS': [
+            TEMPLATES_DIR
             # os.path.join(BASE_DIR, 'templates')
         ],
         'APP_DIRS': True,
@@ -157,7 +160,7 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
-
+# cloudinary_storage
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
