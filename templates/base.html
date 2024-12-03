@@ -29,7 +29,7 @@
         integrity="sha512-ykZ1QQr0Jy/4ZkvKuqWn4iF3lqPZyij9iRv6sGqLRdTPkY69YX6+7wvVGmsdBbiIfN/8OdsI7HABjvEok6ZopQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     {% endblock %}
-    <title>Meal Share & Planner - {% block title %}{% endblock %}</title>
+    <title>Meal Share & Planner</title>
 </head>
 
 <header>
@@ -38,7 +38,7 @@
         <div class="container">
             <a><img src="{% static 'images/logo.webp %'}" alt="" class="logo"></a>
             <ul class="nav justify-content-center">
-
+                
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
@@ -46,9 +46,11 @@
                     <a class="nav-link" href="#">Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Planner</a>
+                    <a class="nav-link {% if request.path == add_recipe %}active{% endif %}" href="{% url 'add_recipe %'}">Add </a>
                 </li>
+                
                 {% if user.is_authenticated %}
+
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
                         href="{% url 'account_logout' %}">Logout</a>
@@ -62,31 +64,26 @@
                     <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                         href="{% url 'account_login' %}">Login</a>
                 </li>
+                
                 {% endif %}
+                <!-- <div class="container-fluid"> -->
+                    <form class="d-flex" role="search">
+                        <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </form>
+                <!-- </div> -->
             </ul>
+            
         </div>
     </div>
-
-    <!-- Form for search bar --> 
-    <!-- <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary" type="submit">Search</button>
-            </form>
-        </div>
-    </nav> -->
 </header>
 
 <body>
-
-
-
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-        <p class="text-end m-3">Welcome {{ user }}</p>
+        <p class="welcome-text">Welcome {{ user }}</p>
         {% else %}
-        <p class="text-end m-3">You are not logged in</p>
+        <p class="not-logged">You are not logged in</p>
         {% endif %}
 
         {% block content %}

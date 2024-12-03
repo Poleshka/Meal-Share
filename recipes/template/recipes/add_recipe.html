@@ -1,15 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=h-100, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Recipe List</h1>
-    {}
-    <h2></h2>
-    <p></p>
-    <p></p>
-</body>
-</html>
+{% extends "base.html" %}
+
+
+{% block content %}
+
+<div class="container">
+    <form method="POST" enctype="multipart/form-data" class="p-2 form-control">
+        <h1 class="text-center">Add Recipe</h1>
+        {% csrf_token %}
+        {% form.media %}
+
+        <div class="text-center">
+            <button class="btn btn-signup  btn-success btn-lg mb-1">Add your recipe</button>
+        </div>
+
+    </form>
+
+</div>
+{% endblock %}
