@@ -88,12 +88,13 @@ footer {
     gap:10px;
 }
 .social {
-    padding-top: 2rem;
+    padding-top: 6rem;
 }
 i {
-    font-size: 30px;
+    font-size: 20px;
     letter-spacing: 2.5;
     gap:10px;
     color: #f6f6f6;
+    margin-top: 10px;
 }
 

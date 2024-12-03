@@ -7,7 +7,7 @@
     <form method="POST" enctype="multipart/form-data" class="p-2 form-control">
         <h1 class="text-center">Add Recipe</h1>
         {% csrf_token %}
-        {% form.media %}
+        {{ form.as_p }}
 
         <div class="text-center">
             <button class="btn btn-signup  btn-success btn-lg mb-1">Add your recipe</button>

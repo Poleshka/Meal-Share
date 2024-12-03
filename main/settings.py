@@ -29,12 +29,12 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-if os.path.isfile('env.py'):
-    import env
-    DEBUG = True
-else:
-    DEBUG = False
+DEBUG = True
+# if os.path.isfile('env.py'):
+#     import env
+#     DEBUG = True
+# else:
+#     DEBUG = False
 
 ALLOWED_HOSTS = ['8000-poleshka-mealshare-5ctih7bsboz.ws.codeinstitute-ide.net', 'https://8000-poleshka-mealshare-5ctih7bsboz.ws.codeinstitute-ide.net', '.herokuapp.com']
 
