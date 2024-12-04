@@ -43,10 +43,10 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Recipes</a>
+                    <a class="nav-link {% if request.path == 'recipes' %}active{% endif %}" href="{% url 'recipes' %}">Recipes</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == add_recipe %}active{% endif %}" href="{% url 'add_recipe %'}">Add </a>
+                    <a class="nav-link {% if request.path == 'add_recipe' %}active{% endif %}" href="{% url 'add_recipe' %}">Add </a>
                 </li>
                 
                 {% if user.is_authenticated %}

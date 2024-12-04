@@ -57,6 +57,8 @@ INSTALLED_APPS = [
     'cloudinary',
     'home',
     'recipes',
+    'crispy_forms',
+    'crispy_bootstrap5',
 ]
 
 SITE_ID = 1
@@ -74,6 +76,9 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootsrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 ROOT_URLCONF = 'main.urls'
 
