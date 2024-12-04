@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from django.views.generic import CreateView, ListView
+from django.views.generic import CreateView, ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse_lazy
 from .models import Recipe
@@ -13,6 +13,12 @@ class Recipes(ListView):
     template_name = 'recipes/recipes.html'
     model = Recipe
     context_object_name = 'recipes'
+
+
+class RecipeDetail(DetailView):
+    template_name = 'recipes/recipe_detail.html'
+    model = Recipe
+    context_object_name = 'recipe'
 
 class AddRecipe(LoginRequiredMixin, CreateView):
     template_name = 'recipes/add_recipe.html'

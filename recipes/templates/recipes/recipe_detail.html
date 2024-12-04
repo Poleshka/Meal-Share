@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container-fluid">
+    <div class="recipe-info">
+        <div class="recipe-img">
+            <img src="{{recipe.image.url}}" alt="{{recipe.image_alt }}">
+        </div>
+        <div class="recipe-detail">
+            <h1>{{recipe.title}}</h1>
+            <p>Posted by {{recipe.user}} on {{recipe.posted_on}}</p>
+            
+            {% if request.user == recipe.user %}
+            <div>
+                <a href="" class="btn-success btn-lg mb-1">Edit</a>
+                <a href="" class="btn-success btn-lg mb-1">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="recipe-box">
+        <div>
+            <h2>Ingredients</h2>
+            <p>{{recipe.ingredients|safe}}</p>
+        </div>
+        <div>
+
+        </div class="description">
+        <h2>Details</h2>
+        <p>{{recipe.description}}</p>
+    </div>
+</div>
+
+{% endblock %}
