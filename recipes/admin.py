@@ -1,9 +1,17 @@
 from django.contrib import admin
-from .models import Recipe
+from django_summernote.admin import SummernoteModelAdmin
+from .models import Recipe, Comment
 
 @admin.register(Recipe)
-class RecipeAdmin(admin.ModelAdmin):
-    list_display =(
-        'title',
+class RecipeAdmin(SummernoteModelAdmin):
+    """
+    List fields for display in admin, fields for search,fields filters and rich-text editor.
+    """
 
-    )
+    list_display =('title', 'posted_on')
+    search_fields=['title','updated_at']
+    summernote_fields=('description',)
+
+
+#Register comment model
+admin.site.register(Comment)
