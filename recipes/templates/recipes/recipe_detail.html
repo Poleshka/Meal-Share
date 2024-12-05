@@ -2,14 +2,14 @@
 
 {% block content %}
 
-<div class="container-fluid">
-    <div class="recipe-info">
-        <div class="recipe-img">
-            <img src="{{recipe.image.url}}" alt="{{recipe.image_alt }}">
+<div class="container">
+    <div class="card-deck recipe-info ">
+        <div class="card recipe-img ">
+            <img src="{{recipe.image.url}}" alt="{{recipe.image_alt }}" class="card-img-top">
         </div>
-        <div class="recipe-detail">
-            <h1>{{recipe.title}}</h1>
-            <p>Posted by {{recipe.user}} on {{recipe.posted_on}}</p>
+        <div class="recipe-detail ">
+            <h1 class="card-title">{{recipe.title}}</h1>
+            <p class="card-text">Posted by {{recipe.user}} on {{recipe.posted_on}}</p>
             
             {% if request.user == recipe.user %}
             <div>
@@ -28,7 +28,7 @@
 
         </div class="description">
         <h2>Details</h2>
-        <p>{{recipe.description}}</p>
+        <p>{{recipe.description|safe}}</p>
     </div>
 </div>
 
