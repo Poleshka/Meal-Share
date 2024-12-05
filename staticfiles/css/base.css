@@ -12,12 +12,63 @@ body, html {
 /* Header */
 /* Navbar */
 .navbar {
-    background-color: #f6f6f6;
-    justify-content: center;
+    background-color: black;
     font-family:'Oxygen',serif;
+    font-weight: bold;
+    padding: 10px 0;
 }
+
 a.nav-link {
-    color: rgb(30, 23, 23);
+    color: #f8f9fa;
+}
+
+/* a.navbar-link:hover {
+    color:#f6f6f6;
+} */
+
+/* Carousel */
+.carousel-caption {
+    background-color: rgba(114, 111, 111, 0.75);
+    border-radius: 10px;
+    padding: 20px;
+    position:absolute;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 30px;
+}
+
+#carouselExample{
+    width: 100%;
+    height: 60vh;
+    margin:0;
+    padding: 0;
+}
+
+.carousel-item img{
+    height:500px;
+    background-size: cover;
+    object-fit:cover;
+}
+/* authentication message */
+.main-bg { 
+    background-color: #f8f9fa;
+    padding: 0px; 
+    border-radius: 15px;
+} 
+.welcome-text { 
+    text-align: end; 
+    margin: 20px; 
+    color: #28a745;
+    
+    font-size: 1.2em; 
+    font-weight: bold; 
+} 
+.not-logged { 
+        text-align: end; 
+        margin: 20px; 
+        color: #dc3545;
+        font-size: 1.2em; 
+        font-weight: bold;
 }
 
 body{
@@ -30,22 +81,39 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Oxygen', serif;
 }
 
-main {}
+main{
+    flex:1;
+}
+
 /* Footer */
 footer {
-    background-color: #f6f6f6;
+    background-color: black;
+    height: 10vh;
     flex-shrink: 0;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     border-top:50%;
+    gap:10px;
 }
 .social {
-    padding-top: 2rem;
+    padding-top: 6rem;
 }
-.conteiner-fluid{
-    background-image: scr();
+i {
+    font-size: 20px;
+    letter-spacing: 2.5;
+    gap:10px;
+    color: #f6f6f6;
+    margin-top: 10px;
 }
-
-/* Recipes */
+/* Recipe details */
+/* .recipe-info{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.recipe-details {
+    text-align: center;
+}
+.recipe-box */
