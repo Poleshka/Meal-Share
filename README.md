@@ -112,7 +112,7 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 Describe how DALL-E was used for image generation, including examples of successes and challenges.  
 **Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
 
-## Features Implementation
+## Features 
 
 ### Core Features (Must-Haves)
 - **Feature 1:** Description of the implemented feature.
