@@ -12,34 +12,88 @@ A brief description of the project's purpose, what it aims to achieve, and the v
 Identify the target audience for your website and explain why this audience will benefit from the project.  
 **Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
 
-## User Stories
+## User Stories, features and bugs
 
-### Must-Have User Stories
-- **User Story 1:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the must-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+<table>
 
-(Include all prioritized must-have features)  
-**Guidance:** Draft the user stories during Phase 1: Ideation & Initial Setup and update them as you complete Phase 2: Must User Stories Implementation & Testing. Document each must-have feature here along with its acceptance criteria.
+  <tr>
+    <th>User Story</th>
+    <th>Features</th>
+    <th>Bugs / Issues</th>
+  </tr>
 
-### Should-Have User Stories
-- **User Story 1:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the should-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+  <tr>
+    <td>As a User, I can view a list of recipes and click on the recipe I want to view. </td>
+    <td>All the recipes are desplayed on the recipe page.</td>
+    <td>None detected</td>
+    </tr>
 
-(Include all prioritized should-have features)  
-**Guidance:** Document the secondary features that you aim to implement in Phase 3: Should User Stories Implementation & Any Advanced Features. Include clear acceptance criteria for each.
+  <tr>
+    <td>As a User, I can click on the recipe so that I can read the full description.</td>
+    <td>When recipe image/title is clicked, a detailed view of the recipe is displayed.</td>
+    <td>None detected</td>
+  </tr>
 
-### Could-Have User Stories
-- **User Story 1:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
-- **User Story 2:** Briefly describe the could-have feature.  
-  **Acceptance Criteria:** List the criteria that define the successful implementation of this user story.
+  <tr>
+    <td>As a User I can view comments on the individual recipe.</td>
+    <td>Give one or more comments the user can view.</td>
+    <td>None detected</td>
+  </tr>
 
-(Include any could-have features considered for future enhancements)  
-**Guidance:** Document any optional features that are nice to have but not essential.
+  <tr>
+    <td>As a User I can leave comments on the recipe.</td>
+    <td>Comments need to be approved by an admin. When approved they are displayed under the recipe.</td>
+    <td>None detected</td>
+  </tr>
+
+  <tr>
+    <td>As a User, I can register/sign up an accout so that I can add recipe and comment on the individual recipe.</td>
+    <td>Given username and password a user can sigup to accout and log in.When logged in they can comment. </td>
+    <td>None detected</td>
+  </tr>
+  
+  <tr>
+    <td>As a user/admin, I can login so that I can access all the available content.</td>
+    <td>User/admin can logout successfully.</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>As a Admin, I can create draft recipe so that I can finish later, prior to publishing</td>
+    <td>I can save draft and finish the content at a later time.</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>As a Admin I can approve/disapprove comments in order to filter out objectionable comments.</td>
+    <td>I can approve or un-approve a comment.</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>As a User I can create a meal plan for a week so that I can organize my meals ahead of time.</td>
+    <td>I can access a form to fill in, that includes fields:meal names and days of the week </td>
+    <td>Feature for future iteration.</td>
+  </tr>
+
+  <tr>
+    <td>As a User I can generate a shopping list based on my meal plan so that I can purchese all the necessary ingredients.</td>
+    <td>I can access shopping with all ingredients for the whole weeks meals.</td>
+    <td>Feature for future iteration.</td>
+  </tr>
+
+  <tr>
+    <td></td>
+    <td></td>
+    <td>Feature for future iterations</td>
+  </tr>
+
+  </table>
+
+<br>
+
+<br>
+
 
 ## Design Decisions
 
