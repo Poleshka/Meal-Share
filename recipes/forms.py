@@ -7,7 +7,12 @@ class RecipeForm(forms.ModelForm):
     """ Form to create a recipe"""
     class Meta:
         model= Recipe
-        fields= ['title','ingredients','description','image']
+        fields= [
+            'title',
+            'ingredients',
+            'description',
+            'image'
+            ]
         widgets = { 'ingredients':SummernoteWidget,}
 
         # ingredients = forms.CharField(SummernoteTextFormField)
