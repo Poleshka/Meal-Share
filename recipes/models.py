@@ -12,7 +12,9 @@ class Recipe(models.Model):
     description = models.TextField()
     posted_on = models.DateTimeField(auto_now=True) 
     updated_at = models.DateTimeField(auto_now=True)
-    image = ResizedImageField(size=[400,None], quality= 75, upload_to='recipes/', blank=True, null=True)
+    image = ResizedImageField(size=[400,None], quality= 75, upload_to='recipes/', blank=True, null=True, default='media/file.jpg')
+    image_alt = models.CharField(max_length=100, null=True, blank=True, default="Recipe image")
+
 
     def __str__(self):
         return self.title

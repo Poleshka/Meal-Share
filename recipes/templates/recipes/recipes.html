@@ -1,21 +1,31 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
-<h1 class="text-center">See what you can russle up this week:
-</h1>
-<div class="container">
-    {% for recipe in recipes %}
-    <!-- <a href="{% url 'recipe_deta'}"></a> -->
-    <a href="{% url 'recipe_detail' recipe.id %}" class="recipes" aria-label="Click to view {{recipe.title}}">
-        <div class="card" style="width: 18rem;">
-            <img src="{{recipe.image.url}}" class="card-img-top" alt="{{recipe.image_alt}}"></a>
-            <div class="card-body">
-                <h2 class="card-title">{{recipe.title}}</h2>
 
-            </div>
+<h2 class="text-center">See what you can russle up this week:</h2>
+
+<div class="col-md-9">
+    <div class="row">
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <!-- {% for recipe in recipes %} -->
+                <a href="{% url 'recipe_detail' recipe.id %}" class="recipes"
+                    aria-label="Click to view {{recipe.title}}">
+                    <div class="card" style="width: 18rem;">
+                        {% if recipe.image %}
+                        <img src="{{recipe.image.url}}" class="card-img-top" alt="{{recipe.image_alt}}">
+                        {% else %}
+                        <img src="{% static 'images/file.jpg' %}" class="card-img-top" alt="No image available">
+                        {% endif %}
+                        <div class="card-body">
+                            <h2 class="card-title">{{recipe.title}}</h2>
+                        </div>
+                    </div>
+                </a>
+            </div><!-- {% endfor %} -->
         </div>
-    
-    {% endfor %}
+    </div>
 </div>
 
 {% endblock %}

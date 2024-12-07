@@ -1,16 +1,22 @@
 # Meal-Share
 
-MealShare is an online platform created to help get ideas for their weekly meal planning.It allows users to create an account and add recipe, view, edit and delete recipes.
+** Welcome to the MealShare**
+---
 
+Image here
 link to Live site
 
-### Purpose
-A brief description of the project's purpose, what it aims to achieve, and the value it provides to the users.  
-**Guidance:** Begin filling out this section during Phase 1: Ideation & Initial Setup. Clearly articulate the main goal of your project, what it aims to achieve, and how it will provide value to your target audience.
+MealShare is an online platform created to help get ideas for their weekly meal planning.It allows users to create an account and add recipe, view, edit and delete recipes.
 
-### Target Audience
-Identify the target audience for your website and explain why this audience will benefit from the project.  
-**Guidance:** Use this section to identify who will benefit from your project and why. This should be informed by your user stories and overall project objectives.
+# Index
+- [UX/User Stories](#uxuser-stories)
+- [Features](#features)
+- [Design](#design)
+- [Testing](#testing)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+- [Credits](#credits)
+
 
 ## User Stories, features and bugs
 
@@ -95,16 +101,16 @@ Identify the target audience for your website and explain why this audience will
 <br>
 
 
-## Design Decisions
+# Design
+## Wireframes
+- Homepage wireframe showing recipe cards and a search bar.
+- Recipe detail page with ingredients, preparation steps, and images.
 
-### Wireframes
-Include wireframes for key sections of your website.  
-Briefly describe the design choices, including layout, colour schemes, and fonts.  
-**Guidance:** Start this section during Phase 1: Ideation & Initial Setup and update it throughout Phase 2 and Phase 3. Include digital wireframes created in Phase 1. Document the reasoning behind your layout choices, colour schemes, and font selections.
+## Design Choices
+- **Colors**: Soft green for a fresh, healthy feel.
+- **Typography**: Sans-serif font for easy readability.
+- **Layout**: Mobile-first design for a responsive experience.
 
-### Accessibility Considerations
-Discuss how accessibility guidelines were adhered to, including colour contrast and alt text for images.  
-**Guidance:** Outline how you've incorporated accessibility into your design, ensuring that your project adheres to guidelines such as WCAG.
 
 ## AI Tools Usage
 
@@ -112,7 +118,11 @@ Discuss how accessibility guidelines were adhered to, including colour contrast 
 Describe how DALL-E was used for image generation, including examples of successes and challenges.  
 **Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
 
-## Features 
+# Features
+- **Recipe Details**: Each recipe has a detailed page with ingredients and instructions
+- **User Authentication**: Users can sign up, log in, and save their favorite recipes.
+- **Rating System**: Users can rate recipes and leave reviews.
+
 
 ### Core Features (Must-Haves)
 - **Feature 1:** Description of the implemented feature.
@@ -141,25 +151,21 @@ Describe how DALL-E was used for image generation, including examples of success
 Describe how GitHub Copilot assisted in coding, including any challenges or adjustments needed.  
 **Guidance:** Reflect on how GitHub Copilot assisted in coding, particularly any challenges or adjustments that were needed to align with project goals.
 
-## Testing and Validation
+# Testing
+## Unit Testing
+- All major functions, such as search, authentication, and rating, were unit tested.
 
-### Testing Results
-Summarize the results of testing across different devices and screen sizes.  
-Mention any issues found and how they were resolved.  
-**Guidance:** Summarize the results of your testing across various devices using tools like Chrome DevTools, as outlined in Phase 2. Mention any issues found and how they were resolved.
+## User Testing
+- Conducted with a small group of users to identify pain points in navigation and search functionality.
 
-### Validation
-Discuss the validation process for HTML and CSS using W3C and Jigsaw validators.  
-Include the results of the validation process.  
-**Guidance:** Document your use of W3C and Jigsaw validators to ensure your HTML and CSS meet web standards. Include any errors or warnings encountered and how they were resolved.
+## Bug Fixes
+- Fixed an issue where the recipe image wouldn’t load if it wasn’t set.
 
-## AI Tools Usage
 
-### GitHub Copilot
-Brief reflection on the effectiveness of using AI tools for debugging and validation.  
-**Guidance:** Reflect on how GitHub Copilot assisted with debugging and validation, particularly any issues it helped resolve.
 
-## Deployment
+
+# Deployment
+## Steps to Deploy
 
 ### Deployment Process
 Briefly describe the deployment process to GitHub Pages or another cloud platform.  
@@ -187,6 +193,11 @@ Provide any additional insights gained during the project and thoughts on the ov
 ## Code Attribution
 Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
 **Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
+
+# Credits
+- **Developers**:
+- **Icons**: favicon
+- **Resources**: Recipe API from [Spoonacular](https://spoonacular.com).
 
 ## Future Improvements
 Briefly discuss potential future improvements or features that could be added to the project.  
