@@ -12,9 +12,9 @@ class Recipe(models.Model):
     description = models.TextField()
     posted_on = models.DateTimeField(auto_now=True) 
     updated_at = models.DateTimeField(auto_now=True)
-    image = ResizedImageField(size=[400,None], quality= 75, upload_to='recipes/', blank=True, null=True, default='media/file.jpg')
+    image = ResizedImageField(size=[400,None], quality= 75, upload_to='recipes/', blank=True, null=True, default='images/wplicaqbia63wjnvzk5l')
     image_alt = models.CharField(max_length=100, null=True, blank=True, default="Recipe image")
-
+    status = models.BooleanField(default=True)
 
     def __str__(self):
         return self.title
@@ -27,6 +27,7 @@ class Comment(models.Model):
     comment entry related to:model:'auth.User' 
     and :model:Recipe
     """
+    
     recipe = models.ForeignKey(Recipe, on_delete=models.CASCADE, related_name="comments")
     author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="commenter")
     body = models.TextField()
@@ -37,4 +38,4 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} by {self.author}"
+        return f"Comment by {self.author} on {self.recipe.title}"

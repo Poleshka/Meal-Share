@@ -3,29 +3,29 @@
 
 {% block content %}
 
-<h2 class="text-center">See what you can russle up this week:</h2>
-
-<div class="col-md-9">
+<div class="container-fluid">
+    <h2 class="text-center m-5">Pick some recipes or your week ahead:</h2>
     <div class="row">
-        <div class="col-md-4 mb-3">
+        {% for recipe in recipes %}
+        <div class="col-12 col-md-6 col-lg-4">
             <div class="card">
-                <!-- {% for recipe in recipes %} -->
-                <a href="{% url 'recipe_detail' recipe.id %}" class="recipes"
+                <a href="{% url 'recipe_detail' recipe.id %}" class="recipes card-img-top"
                     aria-label="Click to view {{recipe.title}}">
-                    <div class="card" style="width: 18rem;">
+                    <p class="card-title">
                         {% if recipe.image %}
-                        <img src="{{recipe.image.url}}" class="card-img-top" alt="{{recipe.image_alt}}">
+                        <img src="{{recipe.image.url}}" alt="{{recipe.image_alt}}" class="card-img-top">
                         {% else %}
-                        <img src="{% static 'images/file.jpg' %}" class="card-img-top" alt="No image available">
+                        <img src="{{recipe.image.url}}" alt="" class="card-img-top">
                         {% endif %}
                         <div class="card-body">
                             <h2 class="card-title">{{recipe.title}}</h2>
                         </div>
-                    </div>
-                </a>
-            </div><!-- {% endfor %} -->
+                    </p>
+            </div>
         </div>
     </div>
+    {% endfor %}
 </div>
+
 
 {% endblock %}

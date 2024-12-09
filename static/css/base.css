@@ -4,7 +4,7 @@
 
 body, html {
     background-color: #fafafa;
-    height: 100%;
+    /* height: 100%; */
     font:'Oxygen', serif;
 }
 
@@ -71,19 +71,20 @@ a.nav-link {
         font-weight: bold;
 }
 
-body{
+/* body{
     display: flex;
     flex-direction: column;
     font-family: 'Karla', serif;
-}
+} */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oxygen', serif;
 }
 
-main{
+
+/* main{
     flex:1;
-}
+} */
 
 /* Footer */
 footer {
@@ -108,12 +109,5 @@ i {
     margin-top: 10px;
 }
 /* Recipe details */
-/* .recipe-info{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.recipe-details {
-    text-align: center;
-}
-.recipe-box */
+/* Recipes */
+
