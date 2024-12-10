@@ -5,7 +5,7 @@
 body, html {
     background-color: #fafafa;
     /* height: 100%; */
-    font:'Oxygen', serif;
+    font-family:'Oxygen', serif;
 }
 
 
@@ -88,6 +88,8 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Footer */
 footer {
+    padding: 0 20px ;
+    margin: 10px 0;
     background-color: black;
     height: 10vh;
     flex-shrink: 0;
@@ -95,7 +97,6 @@ footer {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    border-top:50%;
     gap:10px;
 }
 .social {
@@ -103,11 +104,23 @@ footer {
 }
 i {
     font-size: 20px;
-    letter-spacing: 2.5;
+    letter-spacing: 2.5px;
     gap:10px;
     color: #f6f6f6;
     margin-top: 10px;
 }
 /* Recipe details */
 /* Recipes */
-
+.card {
+    height: 100%;
+    width: 70%;
+}
+.card-img-top {
+    height: 200px; /* Set a fixed height for images */
+    object-fit: cover;
+}
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

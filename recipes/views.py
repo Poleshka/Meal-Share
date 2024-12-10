@@ -1,14 +1,17 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, reverse
+
 from django.contrib import messages
 from django.views.generic import (
 CreateView, ListView, 
 DeleteView, UpdateView
 )
+from .models import Recipe, Comment
+from .forms import RecipeForm, CommentForm
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.urls import reverse_lazy
-from .models import Recipe, Comment
-from .forms import RecipeForm, CommentForm
+
+from django.http import HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
 
 # Create your views here.
@@ -30,6 +33,7 @@ def recipe_detail(request, pk):
     comment_form = CommentForm
     # Handle POST request for comment submission
     if request.method == "POST":
+        print("Received a POST request")
         comment_form = CommentForm(data=request.POST)
 
         if comment_form.is_valid():
@@ -42,6 +46,7 @@ def recipe_detail(request, pk):
                 'Comment submitted and waiting approval')
         else:
             comment_form = CommentForm()
+            print("About to render template")
 
         if not recipe.image:
             recipe.image = 'images/file.jpg'
@@ -60,7 +65,6 @@ class AddRecipe(LoginRequiredMixin, CreateView):
     #fields = ['title', 'ingredients', 'description']  replace these with the fields form your model. 
     success_url = reverse_lazy('recipes')
     
-
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super(AddRecipe,self).form_valid(form)
