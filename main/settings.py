@@ -77,6 +77,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'allauth.account.middleware.AccountMiddleware',
 ]
+X_FRAME_OPTIONS = 'ALLOWALL'
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootsrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"

@@ -80,6 +80,9 @@ body{
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Oxygen', serif;
 }
+p {
+    font-family: "Karla", serif;
+}
 
 main{
     flex:1;
@@ -108,12 +111,22 @@ i {
     margin-top: 10px;
 }
 /* Recipe details */
-/* .recipe-info{
+.card {
+    height: 90%;
+    margin-top: 15px;
+}
+
+.recipe-info {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
 }
-.recipe-details {
-    text-align: center;
+
+.recipe-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.recipe-box */
+hr{
+    color: green;
+}

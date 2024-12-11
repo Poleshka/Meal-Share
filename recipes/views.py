@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, get_object_or_404
 
 from django.contrib import messages
 from django.views.generic import (
@@ -9,7 +9,7 @@ from .models import Recipe, Comment
 from .forms import RecipeForm, CommentForm
 
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
-from django.urls import reverse_lazy
+from django.urls import reverse_lazy, reverse
 
 from django.http import HttpResponseRedirect
 from django.core.exceptions import ObjectDoesNotExist
@@ -73,8 +73,9 @@ class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     template_name = 'recipes/edit_recipe.html'
     form_class = RecipeForm
     model = Recipe
-    success_url= 'recipes/'
 
+    def get_success_url(self):
+        return reverse('recipe_detail', kwargs={'pk': self.object.id})
 
     def test_func(self):
         return self.request.user == self.get_object().user
@@ -88,33 +89,33 @@ class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
         return self.request.user == self.get_object().user
 
 
-class AddRecipe(LoginRequiredMixin, CreateView):
-    template_name = 'recipes/add_recipe.html'
-    model = Recipe
-    form_class =RecipeForm
-    #fields = ['title', 'ingredients', 'description']  replace these with the fields form your model. 
-    success_url = reverse_lazy('recipes')
+# class AddRecipe(LoginRequiredMixin, CreateView):
+#     template_name = 'recipes/add_recipe.html'
+#     model = Recipe
+#     form_class =RecipeForm
+#     #fields = ['title', 'ingredients', 'description']  replace these with the fields form your model. 
+#     success_url = reverse_lazy('recipes')
     
 
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super(AddRecipe,self).form_valid(form)
+#     def form_valid(self, form):
+#         form.instance.user = self.request.user
+#         return super(AddRecipe,self).form_valid(form)
 
-class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    template_name = 'recipes/edit_recipe.html'
-    form_class = RecipeForm
-    model = Recipe
-    success_url= 'recipes/'
+# class EditRecipe(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
+#     template_name = 'recipes/edit_recipe.html'
+#     form_class = RecipeForm
+#     model = Recipe
+#     success_url= 'recipes/'
 
 
-    def test_func(self):
-        return self.request.user == self.get_object().user
+#     def test_func(self):
+#         return self.request.user == self.get_object().user
 
-class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
-    """DElete Recipe"""
-    model= Recipe
-    success_url= '/recipes/'
+# class DeleteRecipe(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
+#     """DElete Recipe"""
+#     model= Recipe
+#     success_url= '/recipes/'
 
-    def test_func(self):
-        return self.request.user == self.get_object().user
+#     def test_func(self):
+#         return self.request.user == self.get_object().user
 

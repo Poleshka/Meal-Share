@@ -2,19 +2,18 @@
 {% load static %}
 
 {% block content %}
-
-<div class="container-fluid">
-    <h2 class="text-center m-5">Pick some recipes or your week ahead:</h2>
+<h2 class="text-center">Select recipes for your weekly meals:</h2>
+<br>
+<div class="container-fluid justify-content-center d-flex flex-row">
     <div class="row">
         {% for recipe in recipes %}
-        <div class="col-lg-4 col-md-12 mb-4">
-            <div class="card card-img-top">
-                <a href="{% url 'recipe_detail' recipe.id %}" class="recipes card-img-top" aria-label="Click to view {{recipe.title}}">
-                    <div class="card-img-wrapper">
-                    {% if recipe.image %}
-                    <img src="{{recipe.image.url}}" alt="{{recipe.image_alt}}" class="card-img-top">
+        <div class="col-md-4 mb-4">
+            <div class="card" style="width: 18rem;">
+                {% if recipe.image %}
+                <a href="{% url 'recipe_detail' recipe.id %}"><img src="{{ recipe.image.url }}" class="card-img-top"
+                        alt="{{ recipe.image_alt }}">
                     {% else %}
-                    <img src="{{recipe.image.url}}" alt="" class="card-img-top">
+                    <img src="{% static 'default-image.jpg' %}" class="card-img-top" alt="Default image">
                     {% endif %}
                     <div class="card-body">
                         <h5 class="card-title">{{recipe.title}}</h5>
@@ -22,10 +21,9 @@
                 </a>
             </div>
         </div>
+        {% endfor %}
     </div>
+    
 </div>
-{% endfor %}
-</div>
-
 
 {% endblock %}
