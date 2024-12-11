@@ -116,23 +116,23 @@ Simple footer with social links
 
 - Sign Up
 The site has a user sign-up facility to add, edit, and delete recipes.
-![alt text](image.jpg)
+![alt text](static/images/README/signup.png)
 
-- Sign In
+- Log In
 After creating accound user can sign in to be able to make changes to their recipes.
-![alt text](image.jpg)
+![alt text](static/images/README/login.png)
 
-- Sign Out
+- Log Out
 The site allows user to sign out of their account
-![alt text](image.jpg)
+![alt text](static/images/README/logout.png)
 
 - Admin
 This site has standard Django admin interface
-![alt text](image.jpg)
+![alt text](static/images/README/admin.png)
 
 - ERD
 The following Entity Relationship Diagram data structure was created:
-![alt text](image.jpg)
+![alt text](static/images/README/Blank%20diagram%20(1).png)
 
 
 # Design
