@@ -111,20 +111,27 @@ MealShare is an online platform created to help get ideas for their weekly meal 
 -Nav bar links
 -Additional background:
 
+![Color pallet](static/images/color%20palet.png)
 
  **Typography**: 
 Google Fonts:
 -Oxygen(body text)
 -Karla(headings)
-![alt text](images/color palet.png)
+
 
 - **Layout**: Mobile-first design for a responsive experience.
 ## Wireframes
 - Homepage wireframe showing recipe cards and a search bar.
 - Recipe detail page with ingredients, preparation steps, and images.
-![alt text](image.jpg)
 
 
+Home Page Wireframe Design
+![Home page](static/images/home_page.png)
+Recipe List/Detail Page Wireframe Design
+![Home page](static/images/list_recipes.png)
+![Home page](static/images/recipe.png)
+Login Page Wireframe Design
+![Home page](static/images/log_in.png)
 
 
 ## AI Tools Usage
