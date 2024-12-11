@@ -18,7 +18,7 @@ MealShare is an online platform created to help get ideas for their weekly meal 
 - [Credits](#credits)
 
 
-## User Stories, features and bugs
+## User Stories
 
 <table>
 
@@ -99,6 +99,40 @@ MealShare is an online platform created to help get ideas for their weekly meal 
 <br>
 
 <br>
+ 
+## Features
+
+- Home Page
+The home page displays the carousel with images and highlights of what is the page about.
+In the future, it will display the latest recipes and a link(view) to the weekly meal planner.
+![home page](static/images/image%20(1).png)
+
+- Navigation Bar
+Template from Bootstrap 
+(Fully responsive)
+
+- Footer
+Simple footer with social links
+
+- Sign Up
+The site has a user sign-up facility to add, edit, and delete recipes.
+![alt text](image.jpg)
+
+- Sign In
+After creating accound user can sign in to be able to make changes to their recipes.
+![alt text](image.jpg)
+
+- Sign Out
+The site allows user to sign out of their account
+![alt text](image.jpg)
+
+- Admin
+This site has standard Django admin interface
+![alt text](image.jpg)
+
+- ERD
+The following Entity Relationship Diagram data structure was created:
+![alt text](image.jpg)
 
 
 # Design
@@ -133,6 +167,110 @@ Google Fonts:
 
 ###Login Page Wireframe Design
 ![Home page](static/images/log_in.png)
+
+# Testing
+
+## Manual Testing
+
+<table>
+
+  <tr>
+    <th>Test</th>
+    <th>PASS/FAIL</th>
+  </tr>
+
+  <tr>
+    <td>Click Home page</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Click Recipe page</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Click Add(recipe) page</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Click Login page</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Click Logout page</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Create profile</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Leave a comment</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>See recipe details</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Add new recipe</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Edit recipe</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Delete recipe</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Searching recipes</td>
+    <td>Fail</td>
+  </tr>
+
+  <tr>
+    <td>Manage recipes(Admin)</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Approve comments(Admin)</td>
+    <td></td>
+  </tr>
+
+  <tr>
+    <td>Generate a shopping list</td>
+    <td>Fail</td>
+  </tr>
+
+  <tr>
+    <td>Add recipes to meal plan</td>
+    <td>Fail</td>
+  </tr>
+
+  <tr>
+    <td>Create meal plan</td>
+    <td>Fail</td>
+  </tr>
+
+  <tr>
+    <td>Rate recipes</td>
+    <td>Fail</td>
+  </tr>
+
+</table>
+
 
 
 ## AI Tools Usage

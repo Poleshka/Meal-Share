@@ -13,12 +13,10 @@ class RecipeForm(forms.ModelForm):
             'description',
             'image'
             ]
-        widgets = { 'ingredients':SummernoteWidget,}
+        widgets = { 'ingredients':SummernoteWidget}
 
-        # ingredients = forms.CharField(SummernoteTextFormField)
-        # description = forms.CharField(SummernoteTextFormField)
-        
 class CommentForm(forms.ModelForm):
+    """Form to add comment to recipes"""
     class Meta:
         model= Comment
         fields = ['body',]

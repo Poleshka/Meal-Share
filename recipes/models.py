@@ -6,6 +6,9 @@ from django_resized import ResizedImageField
 
 # Create your models here.
 class Recipe(models.Model):
+    """
+    single recipe entry related to :model:'auth.User@.|
+    """
     user = models.ForeignKey(User, related_name='recipe_author', on_delete = models.CASCADE)
     title = models.CharField(max_length=200)
     ingredients = models.TextField()
