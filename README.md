@@ -1,12 +1,8 @@
-# Meal-Share
-
-** Welcome to the MealShare**
+# Welcome to the MealShare 
 ---
-
-Image here
-link to Live site
-
 MealShare is an online platform created to help get ideas for their weekly meal planning.It allows users to create an account and add recipe, view, edit and delete recipes.
+---
+![home page](static/images/README/responsive.png)
 
 # Index
 - [UX/User Stories](#uxuser-stories)
@@ -158,17 +154,23 @@ Google Fonts:
 - Homepage wireframe showing recipe cards and a search bar.
 - Recipe detail page with ingredients, preparation steps, and images.
 
-###Home Page Wireframe Design
+### Home Page Wireframe Design
 ![Home page](static/images/home_page.png)
 
-###Recipe List/Detail Page Wireframe Design
+### Recipe List/Detail Page Wireframe Design
 ![Home page](static/images/list_recipes.png)
 ![Home page](static/images/recipe.png)
 
-###Login Page Wireframe Design
+### Login Page Wireframe Design
 ![Home page](static/images/log_in.png)
 
-# Testing
+# Testing and Validation
+
+- W3 HTML Validator
+![HTML Validator](static/images/README/html_checker.png)
+
+- W3 CSS Validator
+![HTML Validator](static/images/README/css_checker.png)
 
 ## Manual Testing
 
@@ -273,59 +275,34 @@ Google Fonts:
 
 
 
-## AI Tools Usage
-
-### DALL-E
-Describe how DALL-E was used for image generation, including examples of successes and challenges.  
-**Guidance:** Specifically mention how you used DALL-E for image generation and the impact this had on your design process.
-
-# Features
-- **Recipe Details**: Each recipe has a detailed page with ingredients and instructions
-- **User Authentication**: Users can sign up, log in, and save their favorite recipes.
-- **Rating System**: Users can rate recipes and leave reviews.
-
-
-### Core Features (Must-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
-
-(Include all must-have features)  
-**Guidance:** Use this section as you complete Phase 2: Must User Stories Implementation & Testing. Document all the must-have features you implemented, explaining how they align with the user stories and acceptance criteria.
-
-### Advanced Features (Should-Haves)
-- **Feature 1:** Description of the implemented feature.
-- **Feature 2:** Description of the implemented feature.
-
-(Include all should-have features)  
-**Guidance:** Include any advanced features you implemented during Phase 3: Should User Stories Implementation & Any Advanced Features. Explain how these features enhance user experience and their alignment with the acceptance criteria.
-
-### Optional Features (Could-Haves)
-- **Feature 1:** Description of the implemented feature (if any).
-- **Feature 2:** Description of the implemented feature (if any).
-
-(Include any could-have features that were implemented or considered)  
-**Guidance:** If any could-have features were implemented, describe them here. This is an opportunity to showcase extra work done beyond the initial scope. But remember - keep it simple! Focus on the Must stories first. Could user story features are commonly earmarked for future project iterations.
-
-## AI Tools Usage
-
-### GitHub Copilot
-Describe how GitHub Copilot assisted in coding, including any challenges or adjustments needed.  
-**Guidance:** Reflect on how GitHub Copilot assisted in coding, particularly any challenges or adjustments that were needed to align with project goals.
-
-# Testing
-## Unit Testing
-- All major functions, such as search, authentication, and rating, were unit tested.
-
-## User Testing
-- Conducted with a small group of users to identify pain points in navigation and search functionality.
-
-## Bug Fixes
-- Fixed an issue where the recipe image wouldn’t load if it wasn’t set.
-
-
-
-
 # Deployment
+
+The site was deployed to Heroku from the main branch of the repository early in the development stage for continuous deployment and checking.
+
+The Heroku app is setup with 3 environment variables, repalcing the environment variables stored in env.py (which doesn't get pushed to github).
+
+In order to create an Heroku app:
+
+Click on New in the Heroku dashboard, and Create new app from the menu dropdown.
+
+Give your new app a unique name, and choose a region, preferably one that is geographically closest to you.
+
+Click "Create app"
+
+In your app settings, click on "Reveal Config Vars" and add the environment variables for your app. These are:
+
+DATABASE_URL - your database connection string
+SECRET_Key - the secret key for your app
+CLOUDINARY_URL - the cloudinary url for your image store
+The PostgreSQL database is served from ElephantSQL
+
+Once the app setup is complete, click on the Deploy tab and:
+
+connect to the required GitHub account
+select the repository to deploy from
+click the Deploy Branch button to start the deployment.
+Once deployment finishes the app can be launched.
+
 ## Steps to Deploy
 
 ### Deployment Process
@@ -355,10 +332,28 @@ Provide any additional insights gained during the project and thoughts on the ov
 Properly attribute any external code sources used in the project (excluding GitHub Copilot-generated code).  
 **Guidance:** Document any external code sources used throughout the entire project, especially during Phase 2 and Phase 3. Exclude GitHub Copilot-generated code from attribution.
 
+# Technologies used
+- HTML5- for page structure
+- CSS3- for custom styling
+- Python- for the backend
+- Django- framework used to build this project
+- Postgres Database- used as the database
+- Google Fonts- for custom font styling
+- Heroku - for hosting and deployement of this project
+- Cloudinary - hosting the static files
+- Git - for version control.
+- GitHub is used for setting up and managing project repositories.
+- GitHub Project Board are utilized for effectively managing tasks, tracking project progress, and ensuring efficient implementation.
+- Balsamiq is used for designing wireframes to visualize project layouts.
+- Bootstrap and custom CSS are used to create visually appealing and responsive website, customized to meet specific project needs.
+
 # Credits
-- **Developers**:
-- **Icons**: favicon
-- **Resources**: Recipe API from [Spoonacular](https://spoonacular.com).
+- Developers**:Dee Mc(django Recipe Sharing Tutorial on YouTube ), CodeInstitute("I Think Therefore I Blog" walkthrough django project)
+- Chatgpt AI: For images and some coding ideas
+- Favicon.io: For Favicon generation.
+- Google Fonts: For typography.
+- Recipes: PickUpLimes[PickUpLimes](https://www.pickuplimes.com/)/AvantGardeVegan[Gaz Oakley](https://www.gazoakleychef.com/)/LazyCatKitchen[LazyCat](https://www.lazycatkitchen.com/)/PeacefulCusine[PeacefulCusine]
+- Recipes Images: SEE ABOVE
 
 ## Future Improvements
 Briefly discuss potential future improvements or features that could be added to the project.  
