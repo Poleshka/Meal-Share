@@ -30,7 +30,7 @@
     {% endblock %}
     <title>Meal Share & Planner</title>
 </head>
-
+<body>
 <header>
     <!-- Navigation bar -->
     <div class="navbar">
@@ -41,8 +41,8 @@
                     <a class="nav-link active" aria-current="page" href="{% url 'home' %}" aria-current="page">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {% if request.path == 'recipes' %}active{% endif %}"
-                        href="{% url 'recipes' %}" aria-current="page">Recipes</a>
+                    <a class="nav-link {% if request.path == 'recipes' %}active{% endif %}" href="{% url 'recipes' %}"
+                        aria-current="page">Recipes</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {% if request.path == 'add_recipe' %}active{% endif %}"
@@ -62,7 +62,7 @@
                     <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
                         href="{% url 'account_login' %}" aria-current="page">Login</a>
                 </li>
-                {% endif %}                
+                {% endif %}
             </ul>
         </div>
     </div>
@@ -80,43 +80,33 @@
     </div>
 </header>
 
-<body>
+
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
         <p class="welcome-text">Welcome {{ user }}</p>
         {% else %}
         <p class="not-logged">You are not logged in</p>
         {% endif %}
-
         {% block content %}
-
-
         {% endblock %}
-
-
     </main>
-
-
-<footer>
-    <!-- social media -->
-    <a href="https://www.instagram.com" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="https://www.twitter.com" target="_blank">
-        <i class="fa-brands fa-twitter"></i>
-    </a>
-
-
-    <a href="https://www.github.com" target="_blank">
-        <i class="fa-brands fa-github"></i>
-    </a>
-
-    <a href="https://www.github.com" target="_blank">
-        <i class="fa-brands fa-linkedin"></i>
-    </a>
-</footer>
+    <footer>
+        <!-- social media -->
+        <a href="https://www.instagram.com" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.twitter.com" target="_blank">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.github.com" target="_blank">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://www.github.com" target="_blank">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </footer>
 </body>
 {% block extras %}
 {% endblock %}
+
 </html>
