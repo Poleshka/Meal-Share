@@ -124,13 +124,14 @@ Google Fonts:
 - Homepage wireframe showing recipe cards and a search bar.
 - Recipe detail page with ingredients, preparation steps, and images.
 
-
-Home Page Wireframe Design
+###Home Page Wireframe Design
 ![Home page](static/images/home_page.png)
-Recipe List/Detail Page Wireframe Design
+
+###Recipe List/Detail Page Wireframe Design
 ![Home page](static/images/list_recipes.png)
 ![Home page](static/images/recipe.png)
-Login Page Wireframe Design
+
+###Login Page Wireframe Design
 ![Home page](static/images/log_in.png)
 
 
