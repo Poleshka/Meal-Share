@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="container">
-    <div class="recipe-info mt-3 p-1">
+    <div class="recipe-info">
         <div class="recipe-img">
             <!-- Check if image exists, and only try to use its URL if it's not None -->
             {% if recipe.image %}
@@ -21,8 +21,8 @@
             
             {% if request.user == recipe.user %}
             <div class="text-center">
-                <a href="{% url 'edit_recipe' pk=recipe.pk %}" class="btn btn-primary w-25">Edit</a>
-                <a href="{% url 'delete_recipe' pk=recipe.pk %}" class="btn btn-primary w-25">Delete</a>
+                <a href="{% url 'edit_recipe' pk=recipe.pk %}" class="btn btn-success w-25">Edit</a>
+                <a href="{% url 'delete_recipe' pk=recipe.pk %}" class="btn btn-success w-25">Delete</a>
             </div>
             {% endif %}
         </div>
@@ -48,7 +48,7 @@
         <form id="commentForm" method="post" style=" margin-top: 1.3em;" placeholder="Leave you comment here!">
             {{ comment_form | crispy }}
             {% csrf_token %}
-            <button id="submitButton" type="submit" class="btn-success btn-lg mb-1">Submit</button>
+            <button id="submitButton" type="submit" class="btn-success btn-lg">Submit</button>
         </form>
         {% else %}
         <p>Log in to leave a comment</p>

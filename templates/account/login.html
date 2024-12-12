@@ -4,28 +4,33 @@
 {% block head_title %}{% trans "Login" %}{% endblock %}
 {% block content %}
 
-<section class="h-100 h-custom">
+<section class="vh-100">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
-      <div class="col-lg-8 col-xl-6">
-        <div class="card rounded-3">
-          <div class="card-body p-4 p-md-5">
-            <h3>{% trans "Login" %}</h3>
-            <p>{% blocktrans %}Welcome to my recipe sharing platform. To add or comment on recipe, please log in.
-              If you want to join the community, then <a class="link" href="{{ signup_url }}">Sign up</a>
-              {% endblocktrans %}</p>
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-              {% csrf_token %}
-              {{ form.as_p }}
-              {% if redirect_field_value %}
-              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-              {% endif %}
-              <button class="btn btn-signup right btn btn-success btn-lg mb-1" type="submit">{% trans "Sign In" %}</button>
-            </form>
+      <div class="col col-xl-10">
+        <div class="card" style="border-radius: 1rem;">
+          <div class="row g-0">
+            <div class="col-md-6 col-lg-7 d-flex align-items-center">
+              <div class="card-body p-lg-5 text-black">
+                <h3>{% trans "Login" %}</h3>
+                <p>{% blocktrans %}Welcome to my recipe sharing platform. To add or comment on recipe, please log in.
+                  If you want to join the community, then <a class="link" href="{{ signup_url }}">Sign up</a>
+                  {% endblocktrans %}</p>
+                <form class="login" method="POST" action="{% url 'account_login' %}">
+                  {% csrf_token %}
+                  {{ form.as_p }}
+                  {% if redirect_field_value %}
+                  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                  {% endif %}
+                  <button class="btn btn-signup right btn btn-success btn-lg mb-1" type="submit">{% trans "Sign In" %}</button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
 {% endblock %}

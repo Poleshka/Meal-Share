@@ -31,53 +31,52 @@
     <title>Meal Share & Planner</title>
 </head>
 <body>
-<header>
-    <!-- Navigation bar -->
-    <div class="navbar">
-        <div class="container">
-            <ul class="nav justify-content-center">
-
-                <li class="nav-item">
-                    <a class="nav-link active" href="{% url 'home' %}" aria-current="page">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == 'recipes' %}active{% endif %}" href="{% url 'recipes' %}"
-                        aria-current="page">Recipes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == 'add_recipe' %}active{% endif %}"
-                        href="{% url 'add_recipe' %}" aria-current="page">Add </a>
-                </li>
-                {% if user.is_authenticated %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == logout_url %}active{% endif %}" 
-                        href="{% url 'account_logout' %}" aria-current="page">Logout</a>
-                </li>
-                {% else %}
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == signup_url %}active{% endif %}" 
-                        href="{% url 'account_signup' %}" aria-current="page">Signup</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link {% if request.path == login_url %}active{% endif %}"
-                        href="{% url 'account_login' %}" aria-current="page">Login</a>
-                </li>
-                {% endif %}
-            </ul>
-        </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 offset-md-2">
-                {% for message in messages %}
-                <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
-                    {{ message | safe }}
-                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        <header>
+            <!-- Navigation bar -->
+            <div class="navbar">
+                <div class="container">
+                    <ul class="nav justify-content-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{% url 'home' %}" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == 'recipes' %}active{% endif %}"
+                                href="{% url 'recipes' %}" aria-current="page">Recipes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == 'add_recipe' %}active{% endif %}"
+                                href="{% url 'add_recipe' %}" aria-current="page">Add </a>
+                        </li>
+                        {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == logout_url %}active{% endif %}"
+                                href="{% url 'account_logout' %}" aria-current="page">Logout</a>
+                        </li>
+                        {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == signup_url %}active{% endif %}"
+                                href="{% url 'account_signup' %}" aria-current="page">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.path == login_url %}active{% endif %}"
+                                href="{% url 'account_login' %}" aria-current="page">Login</a>
+                        </li>
+                        {% endif %}
+                    </ul>
                 </div>
-                {% endfor %}
             </div>
-        </div>
-    </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 offset-md-2">
+                        {% for message in messages %}
+                        <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                            {{ message | safe }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 </header>
 
 

@@ -4,17 +4,12 @@
 
 <div class="container">
     <h1 class="text-center">Delete Recipe</h1>
-    <div class="">
-        <form method="post" class="text-center">
-            {% csrf_token %}
-            <p>Are you sure you want to delete "{{object.title}}"?</p>
-            <input type="submit" value="Confirm" class="btn btn-success btn-lg mb-1">
-            <a href="{% url 'recipe_detail' object.id %}" class="btn btn-danger btn-lg mb-1">Cancel</a>
-        </form>
-        <!-- button incase user does not want to delete the recipe -->
-        
-    </div>
-
+    <form method="post" class="text-center">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{object.title}}"?</p>
+        <input type="submit" value="Confirm" class="btn btn-success btn-lg mb-1">
+        <a href="{% url 'recipe_detail' object.id %}" class="btn btn-danger btn-lg mb-1">Cancel</a>
+    </form>
 </div>
 
 {% endblock %}
