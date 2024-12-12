@@ -12,7 +12,6 @@ Users to create an account, add recipes, and view, edit, and delete recipes.
 
 [MealShare](https://meal-share-and-plan-7acdf6e9ad66.herokuapp.com/)
 
-https://meal-share-and-plan-7acdf6e9ad66.herokuapp.com/
 # Index
 - [UX/User Stories](#uxuser-stories)
 - [Features](#features)
