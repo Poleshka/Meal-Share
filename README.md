@@ -217,6 +217,11 @@ Google Fonts:
   </tr>
 
   <tr>
+    <td>Notification for successull</td>
+    <td></td>
+  </tr>
+
+  <tr>
     <td>See recipe details</td>
     <td></td>
   </tr>
@@ -273,28 +278,22 @@ Google Fonts:
 
 </table>
 
-
-
 # Deployment
 
 The site was deployed to Heroku from the main branch of the repository early in the development stage for continuous deployment and checking.
-
 The Heroku app is setup with 3 environment variables, repalcing the environment variables stored in env.py (which doesn't get pushed to github).
 
 In order to create an Heroku app:
-
-Click on New in the Heroku dashboard, and Create new app from the menu dropdown.
-
-Give your new app a unique name, and choose a region, preferably one that is geographically closest to you.
+-Click on New in the Heroku dashboard, and Create new app from the menu dropdown.
+-Give your new app a unique name, and choose a region, preferably one that is geographically closest to you.
 
 Click "Create app"
 
 In your app settings, click on "Reveal Config Vars" and add the environment variables for your app. These are:
-
-DATABASE_URL - your database connection string
-SECRET_Key - the secret key for your app
-CLOUDINARY_URL - the cloudinary url for your image store
-The PostgreSQL database is served from ElephantSQL
+-DATABASE_URL - your database connection string
+-SECRET_Key - the secret key for your app
+-CLOUDINARY_URL - the cloudinary url for your image store
+-The PostgreSQL database is served from ElephantSQL
 
 Once the app setup is complete, click on the Deploy tab and:
 
@@ -303,18 +302,11 @@ select the repository to deploy from
 click the Deploy Branch button to start the deployment.
 Once deployment finishes the app can be launched.
 
-## Steps to Deploy
+![alt text](static/images/README/heroku.png)
 
-### Deployment Process
-Briefly describe the deployment process to GitHub Pages or another cloud platform.  
-Mention any specific challenges encountered during deployment.  
-**Guidance:** Describe the steps you took to deploy your website during Phase 4: Final Testing, Debugging & Deployment, including any challenges encountered.
+The live link for this project can be found here:[MealShare](https://meal-share-and-plan-7acdf6e9ad66.herokuapp.com/)
 
-## AI Tools Usage
 
-### Reflection
-Describe the role AI tools played in the deployment process, including any benefits or challenges.  
-**Guidance:** Reflect on how AI tools assisted with the deployment process, particularly how they streamlined any tasks or presented challenges.
 
 ## Reflection on Development Process
 
